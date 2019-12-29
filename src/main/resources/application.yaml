@@ -1,0 +1,16 @@
+server:
+  port: 9000
+spring:
+  datasource:
+    url: jdbc:mysql://192.168.8.175:3306/flyway_test_demo?useSSL=false
+    username: root
+    password: root
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+#    spring boot default orm is hibernate
+    hibernate:
+      ddl-auto:validate
+#    docker container run -d --name mysql --rm -p 3306:3306 -e MYSQL_ROOT_PASSWORD=123456 mysql:8.0
+#    docker container exec -it [containerID] /bin/bash
+#    mysql -uroot -proot
+#    create database flyway_test_demo
